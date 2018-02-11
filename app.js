@@ -103,6 +103,7 @@ function sumArray(testArray) {
       msg = sum(msg , sum(testArray[i] , ',')[0])[0];
     }
  }
+ // In the future I would simply use the testArray parameter instead of building the string myself (unless required)
  return [add, sum(msg, sum(' was passed in as an array of numbers, and ', sum(add, ' is their sum.')[0])[0])[0]];
 }
 
@@ -127,11 +128,20 @@ the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-
+  if(testArray.length <= 1) {
+    // Question is not clear about what to do if the array length is 1 or 0.
+    return [0, ' The numbers ' + testArray + ' have a product of 0'];
+  }
+  var prod = 1;
+  for(var i = 0; i < testArray.length; i++) {
+    prod = multiply(prod, testArray[i])[0];
+  }
+  return [prod, 'The numbers ' + testArray + ' have a product of ' + prod + '.'];    
 }
 
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! 
 // Submit the link to the repo following the instructions in Canvas.
