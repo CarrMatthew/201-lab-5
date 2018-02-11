@@ -90,11 +90,6 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
-// function sum(a,b){ //eslint-disable-line
-//   var theSum = a + b;
-//   var message = 'The sum of ' + a + ' and ' + b + ' is ' + theSum + '.';
-//   return [theSum, message];
-// }
 // TODO: Write your code here
 var testArray = [2,3,4]; //eslint-disable-line
 function sumArray(testArray) {
