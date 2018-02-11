@@ -108,7 +108,7 @@ function sumArray(testArray) {
       msg = sum(msg , sum(testArray[i] , ',')[0])[0];
     }
  }
- return [add, msg + ' was passed in as an array of numbers, and ' + add + ' is their sum.'];
+ return [add, sum(msg, sum(' was passed in as an array of numbers, and ', sum(add, ' is their sum.')[0])[0])[0]];
 }
 
 
